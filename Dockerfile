@@ -16,6 +16,6 @@ EXPOSE 6086
 ARG OPENAI_API_KEY
 ENV OPENAI_API_KEY=${OPENAI_API_KEY}
 
-RUN wget https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth ./sam_vit_h_4b8939.pth
+#COPY sam_vit_h_4b8939.pth .
 
-CMD ["python", "app_langchain.py", "--segmenter", "huge", "--captioner", "blip2", "--port", "6086", "--clip_filter"]
+CMD ["python3", "app_langchain.py", "--segmenter", "huge", "--captioner", "blip2", "--port", "6086", "--clip_filter"]
