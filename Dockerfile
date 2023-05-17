@@ -4,7 +4,7 @@ WORKDIR /app
 # Define a sane environment
 RUN apt-get update && \
     apt-get install --no-install-recommends -y git vim build-essential python3-dev python3-pip && \
-    https://github.com/olihough86/Caption-Anything.git .
+    git clone https://github.com/olihough86/Caption-Anything.git .
 
 # Install python reqs
 RUN pip install --no-cache-dir -r requirements.txt
